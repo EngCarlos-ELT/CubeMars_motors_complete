@@ -30,24 +30,24 @@ main.py: This simple entry point file imports the MotorControlApp class and runs
 
 Here's a summary of the complete flow for adding new UI elements:
 
-Define Custom UI Components (if needed)
+1) Define Custom UI Components (if needed)
     Add custom widget classes to ui_components.py
     Extend existing Kivy widgets with additional functionality
     
-Add UI Elements to the App
+2) Add UI Elements to the App
     Modify the build() method in app.py
     Create new widgets and add them to the layout
     Bind event handlers to the widgets
     
-Implement Event Handlers
+3) Implement Event Handlers
     Add new methods to the MotorControlApp class
     Implement the functionality for the new UI elements
     
-Update Unit Tests
+4) Update Unit Tests
     Add tests for the new functionality in unit_tests.py
     Mock UI components and test the event handlers
     
-Update Integration Tests
+5) Update Integration Tests
     Add tests for the new functionality in integration_tests.py
     Test the interaction between UI elements and the application logic
 
