@@ -12,7 +12,8 @@ pip install pyserial
 pip install kivy
 
 On windows the USB/CAN interface can be available in the 'COM' ports list(Ex. COM5).
-On Linux can be available as slcan interface, to find the connection you can use the command: ls /dev/tty*   (ex. /dev/ttyACM0).
+
+On Linux can be available as slcan interface, to find the connection you can use the command: ls /dev/tty*   (ex. /dev/ttyACM0). The command lsusb can help to find the list of connected usb devices. 
 
 
 File Structure Overview.
