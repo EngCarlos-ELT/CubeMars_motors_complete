@@ -4,8 +4,11 @@ Special commands for entering MIT (Model Independent Trajectory) mode, exiting c
 
 IMPORTANT!
 To run this code, the following dependencies are necessary:
+
 pip install python-can
+
 pip install pyserial
+
 pip install kivy
 
 
@@ -30,16 +33,20 @@ Here's a summary of the complete flow for adding new UI elements:
 Define Custom UI Components (if needed)
     Add custom widget classes to ui_components.py
     Extend existing Kivy widgets with additional functionality
+    
 Add UI Elements to the App
     Modify the build() method in app.py
     Create new widgets and add them to the layout
     Bind event handlers to the widgets
+    
 Implement Event Handlers
     Add new methods to the MotorControlApp class
     Implement the functionality for the new UI elements
+    
 Update Unit Tests
     Add tests for the new functionality in unit_tests.py
     Mock UI components and test the event handlers
+    
 Update Integration Tests
     Add tests for the new functionality in integration_tests.py
     Test the interaction between UI elements and the application logic
