@@ -1,0 +1,11 @@
+File Structure Overview.
+
+constants.py: This file centralizes all the motor parameters and operational limits in one place, including position limits (-12.5 to 12.5 radians), velocity limits (-8.0 to 8.0 rad/s), gain limits for position and velocity control, and torque limits (-144.0 to 144.0 N·m). By isolating these constants, the code becomes more maintainable as any adjustments to motor specifications only need to be changed in this single file rather than throughout the codebase.
+
+motor.py: The motor module handles all communication with the CubeMars AK80-64 motor, containing the MotorState class that tracks both commanded and measured values, conversion functions for translating between floating-point physical units and integer CAN protocol values, and command functions for entering/exiting MIT mode, zeroing position, sending control commands, and decoding motor responses. It also includes platform detection to automatically configure the appropriate CAN interface for Windows or Linux systems.
+
+ui_components.py: This file defines reusable custom Kivy UI components, including the LabeledSlider class that combines a label, slider, and value display in a vertical layout, and the StatusDisplay class that presents the motor's current position, velocity, and torque readings in a clean grid layout. These components encapsulate their internal logic and presentation, making the main application code cleaner and more focused on application logic rather than UI details.
+
+app.py: The application file contains the MotorControlApp class that serves as the central controller, building the user interface with sliders for position, velocity, gains, and torque control, along with connection management, command buttons, and status display. It handles all user interactions, manages the connection to the motor via CAN, processes continuous control updates, and maintains a background thread for receiving motor status updates while keeping the UI responsive.
+
+main.py: This simple entry point file imports the MotorControlApp class and runs the application, serving as the starting point for the program and keeping the initialization code separate from the application logic. It's a clean, minimal file that follows the standard pattern for Kivy applications and makes it clear where execution begins.
