@@ -26,7 +26,7 @@ main.py: This simple entry point file imports the MotorControlApp class and runs
 
 
 
-
+Adding more UI components to the window.
 
 Here's a summary of the complete flow for adding new UI elements:
 
