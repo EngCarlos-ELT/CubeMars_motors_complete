@@ -2,6 +2,12 @@ This application provides a comprehensive graphical interface for controlling an
 
 Special commands for entering MIT (Model Independent Trajectory) mode, exiting control modes, and zeroing the position reference are accessible through dedicated buttons. The modular code structure separates motor communication, UI components, and application logic into distinct files, making the system maintainable and extensible for future enhancements or adaptation to other motor models. This tool is particularly valuable for robotics applications, motion control systems, and educational settings where precise motor control and monitoring are required.
 
+IMPORTANT!
+To run this code, the following dependencies are necessary:
+pip install python-can
+pip install pyserial
+pip install kivy
+
 
 File Structure Overview.
 
