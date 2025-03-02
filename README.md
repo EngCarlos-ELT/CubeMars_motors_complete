@@ -20,3 +20,29 @@ ui_components.py: This file defines reusable custom Kivy UI components, includin
 app.py: The application file contains the MotorControlApp class that serves as the central controller, building the user interface with sliders for position, velocity, gains, and torque control, along with connection management, command buttons, and status display. It handles all user interactions, manages the connection to the motor via CAN, processes continuous control updates, and maintains a background thread for receiving motor status updates while keeping the UI responsive.
 
 main.py: This simple entry point file imports the MotorControlApp class and runs the application, serving as the starting point for the program and keeping the initialization code separate from the application logic. It's a clean, minimal file that follows the standard pattern for Kivy applications and makes it clear where execution begins.
+
+
+
+
+
+Here's a summary of the complete flow for adding new UI elements:
+
+Define Custom UI Components (if needed)
+    Add custom widget classes to ui_components.py
+    Extend existing Kivy widgets with additional functionality
+Add UI Elements to the App
+    Modify the build() method in app.py
+    Create new widgets and add them to the layout
+    Bind event handlers to the widgets
+Implement Event Handlers
+    Add new methods to the MotorControlApp class
+    Implement the functionality for the new UI elements
+Update Unit Tests
+    Add tests for the new functionality in unit_tests.py
+    Mock UI components and test the event handlers
+Update Integration Tests
+    Add tests for the new functionality in integration_tests.py
+    Test the interaction between UI elements and the application logic
+
+
+
